@@ -62,7 +62,11 @@ function getFortune() {
         'The bones have spoken! (They say yes)',
         'I have a clouded mind, try again another time',
         'Don\'t count on it!',
-        'Yeah right! You\'re hilarious'
+        'Yeah right! You\'re hilarious',
+        'Of course!',
+        'Probably!',
+        'The future is uncertain',
+        'How dare you ask me that!'
     ]
 
     var fortune = fortunes[Math.floor(Math.random()*fortunes.length)]
