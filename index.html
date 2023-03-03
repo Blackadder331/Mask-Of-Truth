@@ -6,18 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mask of Truth</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- A sleek modern landing page layout-->
+        <!-- A sleek modern landing page layout-->
 
-    <div class="container">                                         
-        <div class="hero">                                        
-            <h1>Tonight, under the Blood Moon, the hunt begins</h1>                      
-        </div><!-- end hero -->                       
-        <div class="main">                                     
-            <!-- page content goes here -->                         
-        </div><!-- end main -->                       
-    </div><!-- end container --> 
+        <div class="container">                                         
+            <div class="hero">                                        
+                <h1 class="fade-in">The Mask</h1>  
+
+
+
+                <img src="./images/mask.png" id="ball" class="mask">
+                
+                <!-- <?xml version="1.0" encoding="UTF-8"?><svg id="Layer_1" class="mask" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 221.71 340.3"><defs><style>.cls-1{fill:#3f382e;}.cls-2{fill:#262623;}</style></defs><path class="cls-1" d="m111,32.53l-7.85,9.97-21.65,27.5-21.65-27.5-6.99-8.88-11.71,14.88-21.65,27.5-6.15-55L11,0h0l-6,118h33.5v34H0v6h38.5v21c0,40.16-9.42,71.74,72,160.9.12.13.24.27.36.4m-27.86-165.3c-7.73,0-14-6.27-14-14s6.27-14,14-14,14,6.27,14,14-6.27,14-14,14Z"/><path class="cls-2" d="m110.85,340.3c.12-.13.24-.27.36-.4,81.42-89.16,72-120.74,72-160.9v-21h38.5s0-6,0-6h-38.5v-34h33.5S210.71,0,210.71,0h0l-2.35,21-6.15,55-21.65-27.5-11.71-14.88-6.99,8.88-21.65,27.5-21.65-27.5-7.56-9.97m13.71,128.47c0-7.73,6.27-14,14-14,7.73,0,14,6.27,14,14,0,7.73-6.27,14-14,14-7.73,0-14-6.27-14-14Z"/></svg> -->
+                <div class="text-holder fade-in">
+                    <span id="of">OF</span> <h1>Truth</h1> 
+                </div>
+                <br>
+                <br>
+                <div class="bottom">
+
+                    <span id="magic-container">
+                        <!-- Stars-->
+                        <span class="magic-star hide">
+                            <svg viewBox="0 0 72.74 34.59">
+                                <style>.cls-1{fill:#0be2ff;}</style>
+                                <polygon class="cls-1" points="34.55 34.59 0 28.36 30.78 0 72.74 17.93 34.55 34.59" />
+                            </svg>
+                        </span>
+                        <span class="magic-star hide">
+                            <svg viewBox="0 0 60.69 60.69">
+                                <path d="M56.82,26.48c-12.47,0-22.61-10.14-22.61-22.61,0-2.13-1.74-3.87-3.87-3.87s-3.87,1.74-3.87,3.87c0,12.47-10.14,22.61-22.61,22.61-2.13,0-3.87,1.74-3.87,3.87s1.74,3.87,3.87,3.87c12.47,0,22.61,10.14,22.61,22.61,0,2.13,1.74,3.87,3.87,3.87s3.87-1.74,3.87-3.87c0-12.47,10.14-22.61,22.61-22.61,2.13,0,3.87-1.74,3.87-3.87s-1.74-3.87-3.87-3.87Z" />
+                            </svg>
+                        </span>
+                        <span class="magic-star hide">
+                            <svg viewBox="0 0 60.69 60.69">
+                                <path d="M56.82,26.48c-12.47,0-22.61-10.14-22.61-22.61,0-2.13-1.74-3.87-3.87-3.87s-3.87,1.74-3.87,3.87c0,12.47-10.14,22.61-22.61,22.61-2.13,0-3.87,1.74-3.87,3.87s1.74,3.87,3.87,3.87c12.47,0,22.61,10.14,22.61,22.61,0,2.13,1.74,3.87,3.87,3.87s3.87-1.74,3.87-3.87c0-12.47,10.14-22.61,22.61-22.61,2.13,0,3.87-1.74,3.87-3.87s-1.74-3.87-3.87-3.87Z" />
+                            </svg>
+                        </span>
+                        <div id="fortune"> </div>
+                    </span>
+                    
+                <!-- <h2 class="question">Ask your question here</h2> -->
+                    <input type="text" placeholder="Ask your question here" class="question" id="question-text"> 
+    
+                    <!-- text input that has the placeholder text "Ask your question here" ⨁ -->
+                    <button onClick="shake()" >✻</button>
+    
+
+                </div>
+                
+                
+                <!-- <img src="./images/mask.png" id="ball"> -->
+            </div><!-- end hero -->                                            
+        </div><!-- end container --> 
     
 </body>
 </html>

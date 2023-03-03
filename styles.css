@@ -1,43 +1,283 @@
+@font-face {
+    font-family: "Migra";
+    src: url(./fonts/Migra-Extrabold.otf);
+}
+
 *, *::after, *::before {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    --gold: #EAC435;
+    --green: #4E6E58;
+    --blue: #6CE3FF;
+}
+
 body {
-    font-family: sans-serif; 
-    background-color: #f2f2f2; 
-    color: #333333; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: "Migra", serif; 
     overflow: hidden;
+    color: var(--gold);
+    background-color: var(--green);
 }
 
 .container { 
-    overflow: hidden;
     margin: 0 auto; 
-
+    display: flex;
+    justify-content: center;
 }
 
 .hero { 
-    background-image: url('./images/image-1.png'); 
-    background-size: cover;  
-    height: 100vh;  
-    width: 100vw;
+    /* background-image: url('./images/image-1.png');  
+    background-size: cover;  */
+    height: 100vh;
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    
+    justify-content: center;
 }
 
 .hero h1 { 
-    font-size: 48px; 
-    color: white;  
-    max-width: 17ch;
+    font-size: 3rem; 
+    max-width: 16ch;
+    text-align: center;
+    /* padding-bottom: 2rem; */
+    margin: 0;
+    padding: 0;
+}
+
+.question {
+    margin-top: 1.5rem;
+    padding: 0 .5rem;
+    border-bottom: 2px solid;
+    animation: fadeInSlow 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 }
 
-.main {  
-      padding: 40px 0;  
+#of {
+    font-size: 1.5rem;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    margin-right: 1.25rem;
+    padding: 2px .5rem 0px .5rem;
+    margin-top: -.4rem;
+}
+
+.text-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button:hover {
+    scale: 1.15
+}
+
+input {
+    width: 13rem;
+}
+
+.mask {
+    height: 20rem;
+    margin: .5rem 0 2rem 0;
+    animation: bounce 2s infinite;
+    /* animation: fadeInSlow 2s; */
+    display: flex;
+    transition-duration: 1.5s;
+    animation-delay: 3.5s;
+    transform: translateY(0rem);
+    transition-timing-function: ease;
+    opacity: 1;
+}
+
+.mask:hover {
+    transform: translateY(3rem);
+    transition-duration: 2s;
+    transition-timing-function: ease;
+    opacity: 0;
+    rotate: 360deg;
+}
+
+/* An animation that bounces an image up and down 2rem infinitely */
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(1rem); }
+    100% { transform: translateY(0); }
+  }
+
+/* Text that fades in from 0 to 1 opacity and raises from -1rem of its starting Y position when the page first loads */
+.fade-in {
+    opacity: 1;
+    animation: fadeIn 2s;
+    transition: opacity .5s ease-in-out, transform .5s ease-in-out;
+}
+
+  
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(6rem);}
+    100% { opacity: 1; transform: translateY(0rem);}
+}
+
+@keyframes fadeInSlow {
+    0% { opacity: 0; }
+    50% {opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#ball {
+    /* height: 5rem; */
+    
+}
+.shake {
+    animation: shake 1s;
+}
+#message{
+    font-size: 1.5em;
+    max-width: 30ch;
+    text-align: center;
+}
+.bottom {
+    margin-top: 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 130px;
+}
+@keyframes shake {
+    0% { transform: translate(4px, 4px) rotate(0deg); }
+    10% { transform: translate(-4px, -4px) rotate(-1deg); }
+    20% { transform: translate(-7px, 0px) rotate(1deg); }
+    30% { transform: translate(7px, 4px) rotate(0deg); }
+    40% { transform: translate(4px, -4px) rotate(1deg); }
+    50% { transform: translate(-4px, 4px) rotate(-1deg); }
+    60% { transform: translate(-7px, 4px) rotate(0deg); }
+    70% { transform: translate(7px, 4px) rotate(-1deg); }
+    80% { transform: translate(-4px, -4px) rotate(1deg); }
+    90% { transform: translate(4px, 4px) rotate(0deg); }
+    100% { transform: translate(4px, -4px) rotate(-1deg); }
+}
+
+
+input,
+button,
+textarea,
+select {
+	padding: 0;
+	background: none;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+button, input, textarea, select, option, ::placeholder {
+	color: var(--gold);
+	font-family: "Migra", serif;
+    text-align: center;
+}
+
+button {
+    animation: fadeInSlow 5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+
+/* star */
+:root {
+
+    --purple: rgb(13, 46, 53);
+    /* --purple: rgb(39, 49, 51); */
+    --violet: rgb(125, 179, 179);
+    --pink: rgb(30, 153, 153);
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+@keyframes scale {
+    from, to {
+      transform: scale(0);
+    }
+    
+    50% {
+      transform: scale(1);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(180deg);
+    }
+}
+
+
+.magic {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    max-width: 32ch;
+}
+
+.hide {display: none;}
+
+
+ /* an animation called hide that faded the content from 0 to 1 opacity after a 1 second delay */
+
+.magic > .magic-star {
+    --size: clamp(20px, 1.5vw, 30px);
+
+    animation: scale 800ms ease forwards;
+    
+    
+    display: block;
+    height: var(--size);
+    left: var(--star-left);
+    position: absolute;
+    top: var(--star-top);
+    width: var(--size);
+}
+
+
+ .magic > .magic-star > svg {
+    animation: rotate 1000ms linear infinite;
+    display: block;
+    opacity: 0.7;
+  }
+
+ .magic > .magic-star > svg > path {
+    fill: #6CE3FF;
+}
+
+.magic > .magic-text {
+    animation: background-pan 3s linear infinite;
+    background: linear-gradient(
+        to right,
+        var(--purple),
+        var(--violet),
+        var(--pink),
+        var(--purple)
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
 }
